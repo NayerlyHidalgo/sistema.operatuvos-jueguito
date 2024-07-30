@@ -1,0 +1,43 @@
+"MKDIR" para crear el archivo "juego_busqueda_del_tesoro"
+"CD" para ingrear al archivo base y realizar el comando de juego.sh
+"NANO" para guardar el codigo una vez probado que funcionaba con el nombre "juego.sh"
+"CHMOD +x JUEGO.SH" para darle permisos al archivo de ejecucion 
+"./JUEGO.SH" para ordenar que se ejecute el juego y pueda empezar a jugar 
+
+Para subirlo a github utilice estos comandos:
+
+"git init"
+"git add ."
+"git commit -m 'Añadir juego completo'"
+"git remote add origin https://github.com/NayerlyHidalgo/sistema.operatuvos-jueguito.git"
+"git branch -M main"
+"git push -u origin main" En este ultimo paso tuve problemas para hacer la conexion asi que los resolvi con estos otros comandos.
+
+ssh-keygen -t ed25519 -C "melifer.j1995@gmail.com"
+cat ~/.ssh/id_ed25519.pub
+  En github parte de fue en cofiguracion y luego a SSH AND GPG KEYS - NEW SSH KEY y agregre el contenido de la clave publica que salio al utilizar el comando cat y la clave.
+  git remote set-url origin git@github.com:NayerlyHidalgo/sistema.operatuvos-jueguito.git
+  ssh -T git@github.com
+me salio un error por directorio aqui
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+yes-enter
+cat ~/.ssh/id_ed25519.pub
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+ssh-add -l
+chmod 600 ~/.ssh/id_ed25519
+chmod 700 ~/.ssh
+git push -u origin main "me volvio a pedir usuario y contraseña aqui"
+git remote -v
+git remote set-url origin git@github.com:NayerlyHidalgo/sistema.operatuvos-jueguito.git
+ssh -T git@github.com
+git pull origin main
+git pull origin main --merge
+git pull origin main --rebase
+git config --global pull.rebase false
+git config --global pull.rebase true
+git status
+git add .
+git push origin main
+y ahi si funciono :3
